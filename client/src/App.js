@@ -6,23 +6,25 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(routing, document.getElementById('root'));
 
-app.get("/")
+
+
 
 function App() {
   return (
+    <Router>
     <div>
       <Nav />
-      <Router>
+      
         <Switch>
           <Route exact path="/" component={Books} />
           <Route exact path="/books" component={Books} />
           <Route exact path="/books/:id" component={Books} />
           <Route exact path="*" component={NoMatch} />
         </Switch>
-      </Router>
+      
     </div>
+    </Router>
   );
 }
 
